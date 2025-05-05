@@ -1,0 +1,26 @@
+<h2>Réclamer un Produit</h2>
+<form action="/submit-complaint" method="POST" enctype="multipart/form-data">
+  <label>Numéro de Commande:</label>
+  <input type="text" name="orderNumber" required><br><br>
+
+  <label>Nom du Produit:</label>
+  <input type="text" name="productName" required><br><br>
+
+  <label>Type de Problème:</label>
+  <select name="issueType" required>
+    <option value="damaged">Produit endommagé</option>
+    <option value="late">Livraison en retard</option>
+    <option value="wrong">Mauvais produit</option>
+  </select><br><br>
+
+  <label>Description du problème:</label><br>
+  <textarea name="description" rows="5" cols="50" placeholder="Décrivez votre problème ici..." required></textarea><br><br>
+
+  <label>Ajouter une photo (facultatif):</label>
+  <input type="file" name="photo"><br><br>
+
+  <label>Email de contact:</label>
+  <input type="email" name="email" required><br><br>
+
+  <button type="submit">Envoyer la réclamation</button>
+</form>
